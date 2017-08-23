@@ -3,7 +3,6 @@ services:
   - mysql
 before_install:
   - mysql -e 'CREATE DATABASE `hello`;'
-  - mysql -e 'USE `hello`;'
-  - mysql -e 'CREATE TABLE `contact` ( `id` int(11) NOT NULL AUTO_INCREMENT, `name` varchar(255) DEFAULT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;'
+  - mysql -e 'USE `hello`; CREATE TABLE `contact` ( `id` int(11) NOT NULL AUTO_INCREMENT, `name` varchar(255) DEFAULT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;'
   - mysql -e 'INSERT INTO `hello`.`contact` (`name`) VALUES ('first');'
   - mysql -e 'INSERT INTO `hello`.`contact` (`name`) VALUES ('second');'
